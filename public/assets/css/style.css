@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #E5E5E5;
+}
+.corpo-principal{
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 935px;
+    display: flex;
+    justify-content: flex-start; 
+    background-color:  #E5E5E5;   
+}
+ion-icon:hover{
+    cursor: pointer;
+    color: #555555 ;
+}
+.bara-inferior{
+    display: none;
+}
+/*INICIO CABECALHO*/
+.cabecalho{
+    height: 54px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.cabecalho-mobile{
+    display: none;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo ion-icon{
+    height: 20px;
+    width: 20px;
+}
+.bara{
+    width: 1px;
+    height: 22px;
+    background-color: #DBDBDB;
+    margin: 0 10px;
+}
+.pesquisa input{
+    box-sizing: border-box;
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;    
+}
+.pesquisa input::placeholder{
+    color: #979797;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+}
+.menu-icones ion-icon{
+    width: 22px;
+    height: 22px;
+    margin: 0 10px;
+}
+/*FIM CABECALHO*/
+
+/*INICIO SIDEBAR*/
+.sidebar{
+    box-sizing: border-box;
+    background-color:  #E5E5E5;
+    width: 293px;
+    height: 100%;
+    position: fixed;
+    top: 0;  
+    padding: 88px 0 0 25px;
+}
+.sidebar-topo{
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.sidebar-topo img{
+    box-sizing: border-box;
+    width: 56px;
+    height: 56px;
+    border-radius: 33px;
+    margin: 0 20px 0 5px;
+}
+.sidebar-topo h1{
+    font-style: bold;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+.sidebar-topo p{ 
+    font-style: normal;  
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #8E8E8E;
+}
+.sidebar-topo span{ 
+   margin: 0 6px;
+}
+.sidebar-meio .container{    
+    display: flex;
+    justify-content: space-between;
+    height: 46px;
+}
+.sidebar-meio .seguir{
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;    
+} 
+.sidebar-meio img{
+    width: 32px;
+    height: 32px;
+    border-radius: 33px;
+    margin-right: 10px;
+}
+.seguir p{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8E8E8E;
+}
+.seguir a{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626;
+    text-decoration: none;
+}
+.seguir-com-img p{
+    font-weight: 400;
+   
+}
+.seguir-com-img h1{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+.seguir-com-img a{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #139EF2;
+}
+.sidebar-rodape p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #C7C7C7;
+    margin: 20px 0;
+}
+.usuario img:hover{
+    cursor: pointer;
+}
+/*FIM SIDEBAR*/
+
+/*INICIO STORIES*/
+.stories{
+    width: 614px;
+    height: 118px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    margin-top: 88px;
+    Overflow: hidden;
+}
+.stories ul{   
+    display: flex;
+    align-items: center;   
+}
+.stories-seta{   
+    position: relative;
+
+}
+.stories-seta ion-icon{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 580px;
+    top: -14px;    
+    border-radius: 50px;
+    color: white;
+    box-shadow: 5px 2px 14px rgba(0, 0, 0, 1);
+}
+.stories img{
+    width: 56px;
+    height: 56px;
+    border-radius: 33px;
+    background-color: #FFFFFF;
+    padding: 3px;
+    
+}
+ .stories-borda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #ff0, #f00, #90c);
+    margin: 0 8px;
+}
+.stories p{
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #262626;
+    margin-top: 5px;
+}
+/*FIM STORIES*/
+
+/*INICIO POSTS*/
+.post-unid{
+    width: 614px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    margin: 24px 0 60px;
+
+}
+.post-top{
+    display: flex;
+    justify-content: space-between;
+}
+.post-top .item{
+    display: flex;
+    margin: 15px 0;
+    align-items: center;
+}
+.post-top img{
+    width: 32px;
+    height: 32px;
+    margin: 0 15px;
+    border-radius: 50px;
+}
+.post-top h2{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #262626;
+}
+.post-top ion-icon{
+    margin: 0 15px;
+}
+.post-mid{
+    width: 614px;
+}
+.post-down{
+    margin: 0 5px;
+}
+.post-down ion-icon{
+    width: 22px;
+    height: 22px;
+    margin: 4px;
+}
+
+.like{
+    width: 23px;
+    height: 23px;
+    margin: 4px;
+    color: red;
+}
+
+.like:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+.post-down .esquerda{
+    display: flex;
+    align-items: center;
+}
+.post-down .curtido img{
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    border-radius: 50px;
+}
+.post-down .container{
+    display: flex;
+    justify-content: space-between;
+}
+.post-down .curtido{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post-down p{    
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+.post-down strong{
+    font-weight: 500;    
+}
+.comentario{
+    display: flex;
+    justify-content: space-between;
+    margin: 4px;
+}
+.post-comentario img{
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+    border-radius: 50px;
+}
+.post-comentario ion-icon{
+    width: 18px;
+    height: 18px;
+    margin: 4px;
+}
+.comentario .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+.user{    
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+}
+.post-comentario strong{
+    font-weight: 500;    
+}
+.responder{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8E8E8E;
+}
+.responder a{
+    text-decoration: none;
+    color: #8E8E8E;
+}
+.publicar-comentario{
+    display: flex;
+}
+.publicar-comentario input{
+    box-sizing: border-box;
+    border: none;
+    border-top: #cfcfcf solid 1px;
+    height: 40px;
+    width: 100%;
+}
+.publicar-comentario input::placeholder{
+    color: #8E8E8E;
+   padding-left: 20px;    
+}
+.publicar-comentario button{
+   border: none;
+   background-color: white;
+   border-top: #cfcfcf solid 1px;
+   padding-right: 20px;
+   color: #B2DFFC;
+   cursor: pointer;
+}
+.publicar-comentario button:hover{
+    color: #0095F6;   
+    transition-duration: 300ms;
+}
+.curtir {
+    color: red;
+}
+/*FIM POSTS*/
+
+@media (max-width: 935px){
+    .sidebar{
+        display: none;
+    }
+    .corpo-principal{
+        justify-content: center; 
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 614px){
+    .corpo-principal{
+        width: 100%; 
+        flex-direction: column; 
+    }
+    .stories{
+        background-color: #E5E5E5;
+        border: 1px solid #E5E5E5;        
+        margin-top: 54px;     
+    }
+    .stories-seta{
+        display: none;
+    }
+    .stories img{       
+        background-color: #E5E5E5;               
+    }
+    .posts .post-unid:nth-child(1){
+        margin-top: 0;
+    }
+    .cabecalho{
+        display: none;
+    }
+    .cabecalho-mobile{
+        height: 54px;
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .item-mobile ion-icon{
+        width: 22px;
+        height: 22px;
+        margin: 0 20px;
+    }
+    .bara-inferior{
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 54px;
+        background-color: #FFFFFF;
+        border: 1px solid #DBDBDB;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 0 20px;
+    }
+    .bara-inferior ion-icon{
+        width: 22px;
+        height: 22px;
+    }
+}
