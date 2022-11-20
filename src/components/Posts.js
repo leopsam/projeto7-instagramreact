@@ -58,7 +58,7 @@ function Perfil(props){
     const [likes, setLikes] = React.useState(props.like)    
 
     return(
-        <li class="post-unid">
+        <li data-test="post" class="post-unid">
             <div class="post-top">
                             <div class="item">
                                 <img src={props.imgPerfil}/>
@@ -68,21 +68,21 @@ function Perfil(props){
                                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                             </div>
             </div>
-            <img onClick={curtirPost} class="post-mid" src={props.imgPost}/>
+            <img data-test="post-image" onClick={curtirPost} class="post-mid" src={props.imgPost}/>
             <div class="post-down">
                             <div class="container">
                                 <div class="esquerda"> 
-                                    <img class="like" onClick={curtir} src={coracao}/>                
+                                    <img data-test="like-post" class="like" onClick={curtir} src={coracao}/>                
                                     <ion-icon name="chatbubble-outline"></ion-icon>
                                     <ion-icon name="paper-plane-outline"></ion-icon>                    
                                 </div>
                                 <div class="direita">
-                                    <ion-icon onClick={salvar} name={salvaPost}></ion-icon>
+                                    <ion-icon data-test="save-post" onClick={salvar} name={salvaPost}></ion-icon>
                                 </div>
                             </div>
                             <div class="curtido">
                                 <img src={props.imgCurtir} />
-                                <p>Curtido por <strong>{props.nomeCurtir}</strong> e <strong>outras {likes} pessoas</strong></p>
+                                <p>Curtido por <strong>{props.nomeCurtir}</strong> e <strong data-test="likes-number">outras {likes} pessoas</strong></p>
                             </div>
             </div>
         </li>

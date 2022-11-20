@@ -32,11 +32,11 @@ function Perfil(props){
 
     return(
         
-        <div class="sidebar-topo usuario">
-                <img onClick={editarImagem} src={imagem} />
+        <div class="sidebar-topo usuario" data-test="user">
+                <img data-test="profile-image" onClick={editarImagem} src={imagem} />
                 <div class="container">
                     <h1>{props.nomePerfil}</h1>
-                    <p>{nome}<span onClick={editarNome}><ion-icon name="pencil"></ion-icon></span></p>
+                    <p data-test="name">{nome}<span onClick={editarNome} data-test="edit-name"><ion-icon name="pencil"></ion-icon></span></p>
                 </div>
             </div>
     )
