@@ -24,10 +24,20 @@ function Perfil(props){
 
     function editarImagem(){
         setImagem(prompt("Escolha o link da imagem do seu perfil.")) 
+
+        
+    }
+
+    if(imagem === ""){
+        setImagem("./assets/img/perfil.jpg");
     }
 
     function editarNome(){
         setNome(prompt("Qual nome deseja inserir?"))    
+    }
+
+    if(nome === ""){
+        setNome(prompt("Você não digitou um nome, Qual nome deseja inserir?"))
     }
 
     return(

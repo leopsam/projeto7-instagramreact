@@ -68,7 +68,7 @@ function Perfil(props){
                                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                             </div>
             </div>
-            <img data-test="post-image" onClick={curtirPost} class="post-mid" src={props.imgPost}/>
+            <img data-test="post-image" onDoubleClick={curtirPost} class="post-mid" src={props.imgPost}/>
             <div class="post-down">
                             <div class="container">
                                 <div class="esquerda"> 
@@ -93,6 +93,7 @@ function Perfil(props){
             setCoracao("assets/img/like.svg")
             setLikes(likes + 1)
         }
+
     }
 
     function curtir(){
