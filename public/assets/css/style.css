@@ -278,14 +278,38 @@ ion-icon:hover{
     height: 22px;
     margin: 4px;
 }
-
+.container-curtida{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.curtida-post {
+    position: absolute;    
+    z-index: 99;   
+    height: 250px;
+    width: 250px; 
+    margin: auto 2px;
+    background-image: url('../img/like-post.svg');    
+    animation: curtida-post 3s ;    
+}
+@keyframes curtida-post{ 
+    from {
+        transform: scale(0.2);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+.esconde{
+    display: none;
+}
 .like{
     width: 23px;
     height: 23px;
     margin: 4px;
     color: red;
 }
-
 .like:hover{
     opacity: 0.5;
     cursor: pointer;

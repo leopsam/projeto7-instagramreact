@@ -56,6 +56,7 @@ function Perfil(props){
     const [salvaPost, setSalvaPost] = React.useState("bookmark-outline")
     const [coracao, setCoracao] = React.useState("assets/img/deslike.svg")
     const [likes, setLikes] = React.useState(props.like)    
+    const [esconde, setEsconde] = React.useState("esconde curtida-post")  
 
     return(
         <li data-test="post" class="post-unid">
@@ -68,10 +69,14 @@ function Perfil(props){
                                 <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                             </div>
             </div>
-            <img data-test="post-image" onDoubleClick={curtirPost} class="post-mid" src={props.imgPost}/>
+            <div class="container-curtida">
+                <div class={esconde}></div>
+                <img data-test="post-image" onDoubleClick={curtirPost} class="post-mid" src={props.imgPost}/>
+            </div>
             <div class="post-down">
                             <div class="container">
                                 <div class="esquerda"> 
+                                    
                                     <img data-test="like-post" class="like" onClick={curtir} src={coracao}/>                
                                     <ion-icon name="chatbubble-outline"></ion-icon>
                                     <ion-icon name="paper-plane-outline"></ion-icon>                    
@@ -88,12 +93,17 @@ function Perfil(props){
         </li>
     )
 
+    function parar(){
+        setEsconde("esconde curtida-post")
+    }
+    
     function curtirPost(){
         if(coracao === "assets/img/deslike.svg"){            
             setCoracao("assets/img/like.svg")
             setLikes(likes + 1)
-        }
-
+            setEsconde("curtida-post")
+            setTimeout(parar, 5000);
+        } 
     }
 
     function curtir(){
@@ -112,7 +122,6 @@ function Perfil(props){
         }else if(salvaPost === "bookmark"){
             setSalvaPost("bookmark-outline")
         }
-    }   
-
+    }
 }
 
